@@ -12,6 +12,7 @@ import com.openjarvis.android.core.config.ApiKeyProvider
 import com.openjarvis.android.core.config.JarvisPreferencesRepository
 import com.openjarvis.android.core.config.JarvisSettings
 import com.openjarvis.android.core.domain.model.InferenceMode
+import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow

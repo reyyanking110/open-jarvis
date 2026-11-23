@@ -1,4 +1,4 @@
-package com.openjarvis.android.tools.native
+package com.openjarvis.android.tools.platform
 
 import android.Manifest
 import android.content.Context
