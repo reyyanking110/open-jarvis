@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "17"
@@ -23,4 +23,19 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Run Unit Tests & Assemble Debug APK
-        run: ./gradlew clean testDebugUnitTest assembleDebug --stacktrace
+        run: |
+          set +e
+          ./gradlew clean testDebugUnitTest assembleDebug --no-daemon --console=plain > gradle.log 2>&1
+          EXIT_CODE=$?
+          cat gradle.log
+          if [ $EXIT_CODE -ne 0 ]; then
+            python3 - <<'PY'
+          with open("gradle.log", "r", errors="replace") as f:
+              lines = [l.rstrip() for l in f]
+          interesting = [l for l in lines if any(k in l for k in ("FAILURE:", "* What went wrong:", "e: ", "error:", "Exception", "Could not resolve", "Could not find", "> "))]
+          tail = interesting[-8:] if interesting else lines[-8:]
+          for l in tail:
+              print("::error::" + l.replace("%", "%25").replace("\r", "").replace("\n", " "))
+          PY
+            exit $EXIT_CODE
+          fi
