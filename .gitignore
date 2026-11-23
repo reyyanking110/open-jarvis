@@ -71,7 +71,8 @@ reports/
 *.pt
 *.pth
 *.bin
-models/
+/models/
+app/src/main/assets/models/
 
 # Logs & temporary files
 *.log
