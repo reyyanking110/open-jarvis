@@ -1,4 +1,4 @@
-package com.openjarvis.android.tools.native
+package com.openjarvis.android.tools.device
 
 import android.content.Context
 import com.openjarvis.android.core.domain.model.MemoryCategory

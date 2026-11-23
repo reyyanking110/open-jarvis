@@ -41,3 +41,17 @@ jobs:
           PY
             exit $EXIT_CODE
           fi
+          python3 - <<'PY'
+          import glob, os, xml.etree.ElementTree as ET
+          total = failed = skipped = 0
+          for p in sorted(glob.glob("app/build/test-results/testDebugUnitTest/TEST-*.xml")):
+              root = ET.parse(p).getroot()
+              t = int(root.attrib.get("tests", 0))
+              f = int(root.attrib.get("failures", 0)) + int(root.attrib.get("errors", 0))
+              s = int(root.attrib.get("skipped", 0))
+              total += t; failed += f; skipped += s
+              print(f"::notice::Suite {root.attrib.get('name')}: {t} tests, {f} failed, {s} skipped")
+          apks = glob.glob("app/build/outputs/apk/debug/*.apk")
+          apk_info = ", ".join(f"{os.path.basename(a)} ({os.path.getsize(a)//1024} KB)" for a in apks)
+          print(f"::notice::TOTAL TESTS: {total} passed={total-failed-skipped} failed={failed} skipped={skipped} | APK: {apk_info}")
+          PY

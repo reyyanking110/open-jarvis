@@ -1,4 +1,4 @@
-package com.openjarvis.android.tools.native
+package com.openjarvis.android.tools.device
 
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.booleanOrNull
