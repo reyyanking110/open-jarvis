@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Open JARVIS</string>
+    <string name="agent_channel_name">Agent Execution</string>
+    <string name="agent_channel_description">Live progress and control for multi-step autonomous tasks</string>
+    <string name="download_channel_name">Model Downloads</string>
+    <string name="download_channel_description">Progress updates for local LLM model downloads</string>
+    <string name="jarvis_alerts_channel_name">JARVIS Alerts</string>
+    <string name="jarvis_alerts_channel_description">Notifications created by JARVIS tools and reminders</string>
+</resources>
