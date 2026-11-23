@@ -32,10 +32,12 @@ jobs:
             python3 - <<'PY'
           with open("gradle.log", "r", errors="replace") as f:
               lines = [l.rstrip() for l in f]
-          interesting = [l for l in lines if any(k in l for k in ("FAILURE:", "* What went wrong:", "e: ", "error:", "Exception", "Could not resolve", "Could not find", "> "))]
-          tail = interesting[-8:] if interesting else lines[-8:]
-          for l in tail:
-              print("::error::" + l.replace("%", "%25").replace("\r", "").replace("\n", " "))
+          cut = next((i for i, l in enumerate(lines) if "FAILURE: Build failed" in l), len(lines))
+          pre = [l for l in lines[:cut] if l.strip()]
+          err_lines = [l for l in pre if any(k in l for k in ("e: ", "[ksp]", "error:", "Exception", "Hilt", "Room", "Ksp"))]
+          chosen = err_lines[:8] if err_lines else pre[-8:]
+          for l in chosen:
+              print("::error::" + l[:300].replace("%", "%25").replace("\r", "").replace("\n", " "))
           PY
             exit $EXIT_CODE
           fi
