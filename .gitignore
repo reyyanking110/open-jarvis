@@ -1,0 +1,86 @@
+# Built application files
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+
+# Gradle files
+.gradle/
+build/
+**/build/
+app/release/
+app/debug/
+
+# Local configuration & API secrets
+local.properties
+secrets.properties
+apikey.properties
+apikeys.properties
+gemini.properties
+keystore.properties
+signing.properties
+.env
+.env.*
+*.env
+
+# Firebase / Cloud / Service credentials
+google-services.json
+firebase-debug.log
+service-account*.json
+*credentials*.json
+
+# Signing keys & certificates
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+
+# Android Studio / IntelliJ IDE caches & user-local state
+*.iml
+.idea/*
+!.idea/codeStyles/
+!.idea/inspectionProfiles/
+.navigation/
+captures/
+*.hprof
+hs_err_pid*
+
+# Native / C++ / NDK build outputs
+.externalNativeBuild/
+.cxx/
+obj/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Android Lint & test reports
+lint/
+test-results/
+reports/
+
+# On-device LLM weights & large ML artifacts (exceed GitHub 100 MB limit)
+*.gguf
+*.task
+*.tflite
+*.litertlm
+*.onnx
+*.safetensors
+*.pt
+*.pth
+*.bin
+models/
+
+# Logs & temporary files
+*.log
+*.tmp
+*.swp
+*~
+
+# OS & editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
