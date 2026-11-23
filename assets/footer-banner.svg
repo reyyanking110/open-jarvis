@@ -1,0 +1,56 @@
+<svg width="1200" height="170" viewBox="0 0 1200 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="footerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#854D0E" />
+      <stop offset="30%" stop-color="#172554" />
+      <stop offset="70%" stop-color="#0B192C" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <linearGradient id="footerWave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.30" />
+      <stop offset="50%" stop-color="#3B82F6" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0.28" />
+    </linearGradient>
+
+    <linearGradient id="footerGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="50%" stop-color="#FDE68A" />
+      <stop offset="100%" stop-color="#F8FAFC" />
+    </linearGradient>
+  </defs>
+
+  
+  <rect width="1200" height="170" rx="16" fill="url(#footerBg)" />
+
+  
+  <path fill="#0D1117" fill-opacity="0.90">
+    <animate attributeName="d" dur="7s" repeatCount="indefinite" values="
+        M0,0 L1200,0 L1200,36 C960,68 720,12 480,42 C240,70 100,22 0,38 Z;
+        M0,0 L1200,0 L1200,48 C940,16 680,66 420,30 C200,8 90,52 0,28 Z;
+        M0,0 L1200,0 L1200,36 C960,68 720,12 480,42 C240,70 100,22 0,38 Z
+      " />
+  </path>
+
+  
+  <path fill="url(#footerWave)">
+    <animate attributeName="d" dur="9s" repeatCount="indefinite" values="
+        M0,0 L1200,0 L1200,56 C900,24 650,82 380,48 C180,24 80,68 0,50 Z;
+        M0,0 L1200,0 L1200,42 C920,76 620,20 350,58 C160,82 70,34 0,44 Z;
+        M0,0 L1200,0 L1200,56 C900,24 650,82 380,48 C180,24 80,68 0,50 Z
+      " />
+  </path>
+
+  
+  <rect x="1" y="1" width="1198" height="168" rx="15" stroke="#D4AF37" stroke-opacity="0.45" stroke-width="1.5" />
+
+  
+  <g opacity="1">
+    <text x="600" y="112" text-anchor="middle" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="4" fill="url(#footerGold)">
+      OPEN JARVIS ANDROID
+    </text>
+    <text x="600" y="138" text-anchor="middle" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="500" letter-spacing="1.5" fill="#CBD5E1">
+      ENGINEERED BY @REYYANKING110  •  KOTLIN  •  JETPACK COMPOSE  •  GEMINI 2.5  •  LITERT-LM
+    </text>
+  </g>
+</svg>
