@@ -3,7 +3,7 @@
 <!-- ========================================================================= -->
 <!--                    3D ANIMATED HERO HEADER BANNER                         -->
 <!-- ========================================================================= -->
-<img src="./assets/hero-banner.svg" width="100%" alt="Open JARVIS Android 3D Wave Header" />
+<img src="./assets/hero-banner.svg?v=1" width="100%" alt="Open JARVIS Android 3D Wave Header" />
 
 <br/>
 
@@ -11,10 +11,11 @@
 <!--                   DYNAMIC MULTI-LINE ANIMATED SUBTITLE                    -->
 <!-- ========================================================================= -->
 <a href="https://github.com/reyyanking110/open-jarvis">
-  <img src="./assets/typing-subtitle.svg" width="88%" alt="Dynamic Animated Subtitle" />
+  <img src="./assets/typing-subtitle.svg?v=1" width="88%" alt="Dynamic Animated Subtitle" />
 </a>
 
 <br/>
+
 <!-- ========================================================================= -->
 <!--                     PREMIUM TECH STACK & STATUS BADGES                    -->
 <!-- ========================================================================= -->
@@ -43,9 +44,6 @@
     <img src="https://img.shields.io/badge/DOWNLOAD_DEBUG_APK-GITHUB_ACTIONS_CI_ARTIFACT-D4AF37?style=for-the-badge&logo=githubactions&logoColor=050811" height="44" alt="Download Debug APK" />
   </a>
 </p>
-
-<!-- ANIMATED DIVIDER LINE -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" alt="Animated Gradient Divider" />
 
 <!-- QUICK NAVIGATION BAR -->
 <p>
@@ -93,7 +91,7 @@ Unlike passive chat wrappers, Open JARVIS operates as a **closed-loop autonomous
   </tr>
 </table>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" alt="Animated Gradient Divider" />
+---
 
 <a id="apk-installation-guide"></a>
 ## APK Installation Guide
@@ -126,7 +124,7 @@ Get the latest compiled debug build directly from the automated GitHub Actions C
   </tr>
 </table>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" alt="Animated Gradient Divider" />
+---
 
 <a id="3d-hybrid-architecture"></a>
 ## 3D Hybrid System Architecture
