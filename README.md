@@ -2,6 +2,17 @@
 
 A native, autonomous, hybrid AI agent for Android smartphones inspired by [OpenJarvis](https://github.com/open-jarvis/OpenJarvis), built with Kotlin, Jetpack Compose, Hilt, Room, Gemini REST API, and LiteRT-LM (`com.google.ai.edge.litertlm`).
 
+## Download APK
+
+[![Download Debug APK](https://img.shields.io/badge/Download-Debug_APK-0284C7?style=for-the-badge&logo=android&logoColor=white)](https://github.com/reyyanking110/open-jarvis/actions/runs/45148566182)
+
+1. Open the linked successful Android CI run.
+2. Find the `Artifacts` section.
+3. Download `open-jarvis-debug-apk`.
+4. Extract the ZIP and install `app-debug.apk`.
+
+> **Note:** GitHub Actions build artifacts are temporary and may expire based on repository retention settings.
+
 ## Architecture
 
 - **Intelligence Layer:** `ModelCatalog` covering Gemini Cloud (`gemini-2.5-flash`, `gemini-2.5-pro`) and on-device LiteRT-LM models (`Gemma 3 1B INT4`, `Qwen 2.5 1.5B Q8`, `Gemma 3n E2B INT4`).
