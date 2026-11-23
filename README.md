@@ -3,17 +3,18 @@
 <!-- ========================================================================= -->
 <!--                    3D ANIMATED HERO HEADER BANNER                         -->
 <!-- ========================================================================= -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:050811,35:0B192C,70:1E3A8A,100:D4AF37&height=280&section=header&text=OPEN%20JARVIS%20ANDROID&fontSize=48&fontColor=F8FAFC&fontAlignY=36&animation=fadeIn&desc=Autonomous%20Hybrid%20Edge%20%26%20Cloud%20AI%20Operating%20Layer&descAlignY=57&descSize=19" width="100%" alt="Open JARVIS Android 3D Wave Header" />
-
-<!-- ========================================================================= -->
-<!--                   DYNAMIC MULTI-LINE TYPING ANIMATION                     -->
-<!-- ========================================================================= -->
-<a href="https://github.com/reyyanking110/open-jarvis">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=2800&pause=900&color=F59E0B&center=true&vCenter=true&multiline=false&width=860&height=42&lines=Native+Kotlin+2.0+%26+Jetpack+Compose+Autonomous+Agent;Hybrid+Cloud+Gemini+2.5+%2B+On-Device+LiteRT-LM+Inference;Hardware-Aware+Thermal%2C+RAM%2C+Battery+%26+Privacy+Routing;AES-256-GCM+Hardware+Keystore+%26+Zero-Trust+Action+Gates" alt="Dynamic Typing Banner" />
-</a>
+<img src="./assets/hero-banner.svg" width="100%" alt="Open JARVIS Android 3D Wave Header" />
 
 <br/>
 
+<!-- ========================================================================= -->
+<!--                   DYNAMIC MULTI-LINE ANIMATED SUBTITLE                    -->
+<!-- ========================================================================= -->
+<a href="https://github.com/reyyanking110/open-jarvis">
+  <img src="./assets/typing-subtitle.svg" width="88%" alt="Dynamic Animated Subtitle" />
+</a>
+
+<br/>
 <!-- ========================================================================= -->
 <!--                     PREMIUM TECH STACK & STATUS BADGES                    -->
 <!-- ========================================================================= -->
