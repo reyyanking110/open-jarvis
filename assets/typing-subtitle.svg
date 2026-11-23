@@ -1,0 +1,49 @@
+<svg width="900" height="50" viewBox="0 0 900 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pillBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#050811" />
+      <stop offset="50%" stop-color="#0B192C" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+    <linearGradient id="goldStroke" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#F59E0B" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0.2" />
+    </linearGradient>
+  </defs>
+
+  
+  <rect x="1" y="1" width="898" height="48" rx="12" fill="url(#pillBg)" stroke="url(#goldStroke)" stroke-width="1.5" />
+
+  
+  <g opacity="1">
+    <animate attributeName="opacity" values="1;1;0;0;0;0;0;0;1" keyTimes="0;0.20;0.25;0.45;0.50;0.70;0.75;0.95;1" dur="14s" repeatCount="indefinite" />
+    <text x="450" y="31" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="17" font-weight="700" fill="#F59E0B">
+      Native Kotlin 2.0 &amp; Jetpack Compose Autonomous Agent
+    </text>
+  </g>
+
+  
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0;0;0;0;0" keyTimes="0;0.22;0.26;0.45;0.50;0.70;0.75;0.95;1" dur="14s" repeatCount="indefinite" />
+    <text x="450" y="31" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="17" font-weight="700" fill="#38BDF8">
+      Hybrid Cloud Gemini 2.5 + On-Device LiteRT-LM Inference
+    </text>
+  </g>
+
+  
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0;1;1;0;0;0" keyTimes="0;0.22;0.26;0.47;0.51;0.70;0.75;0.95;1" dur="14s" repeatCount="indefinite" />
+    <text x="450" y="31" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="17" font-weight="700" fill="#34D399">
+      Hardware-Aware Thermal, RAM, Battery &amp; Privacy Routing
+    </text>
+  </g>
+
+  
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0;0;0;1;1;0" keyTimes="0;0.22;0.26;0.47;0.51;0.72;0.76;0.95;1" dur="14s" repeatCount="indefinite" />
+    <text x="450" y="31" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="17" font-weight="700" fill="#FDE68A">
+      AES-256-GCM Hardware Keystore &amp; Zero-Trust Action Gates
+    </text>
+  </g>
+</svg>
