@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open JARVIS Android — Autonomous Hybrid AI Agent</title>
+  <meta
+    name="description"
+    content="A native, autonomous, hybrid AI agent for Android smartphones built with Kotlin, Jetpack Compose, Hilt, Room, Gemini REST API, and LiteRT-LM."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand">
+        <span class="brand-mark" aria-hidden="true">OJ</span>
+        <span class="brand-text">Open JARVIS <span class="brand-tag">Android</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#download">Download APK</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#models">Models</a>
+        <a href="#tools">Tools</a>
+        <a href="#setup">Setup</a>
+      </nav>
+      <a
+        class="btn btn-sm btn-outline"
+        href="https://github.com/reyyanking110/open-jarvis"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="pill">
+            <span class="pill-dot" aria-hidden="true"></span>
+            Android 12+ (API 31) · Kotlin &amp; Jetpack Compose · v1.0.0
+          </div>
+          <h1>Autonomous Hybrid AI Agent for Android</h1>
+          <p class="lead">
+            Inspired by
+            <a href="https://github.com/open-jarvis/OpenJarvis" target="_blank" rel="noopener noreferrer">OpenJarvis</a>,
+            Open JARVIS Android pairs Gemini cloud reasoning with real on-device
+            <strong>LiteRT-LM</strong> inference, persistent FTS4 memory, and
+            11 native Android platform tools behind explicit user confirmation gates.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="btn btn-primary"
+              href="https://github.com/reyyanking110/open-jarvis/actions/runs/45148566182"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download Debug APK
+            </a>
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/reyyanking110/open-jarvis"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Inspect Source Code
+            </a>
+          </div>
+          <dl class="hero-stats">
+            <div>
+              <dt>Inference</dt>
+              <dd>Gemini + LiteRT-LM</dd>
+            </div>
+            <div>
+              <dt>Agent Loop</dt>
+              <dd>Plan → Tool → Verify</dd>
+            </div>
+            <div>
+              <dt>Platform Tools</dt>
+              <dd>11 Native Modules</dd>
+            </div>
+            <div>
+              <dt>Key Storage</dt>
+              <dd>AES-256-GCM KeyStore</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="hero-terminal" aria-label="Agent execution overview">
+          <div class="terminal-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">AutonomousAgentEngine · Hybrid Router</span>
+          </div>
+          <pre class="terminal-body"><code><span class="c-muted">// HybridInferenceRouter decision</span>
+<span class="c-key">network</span>: available | offline
+<span class="c-key">privacyMode</span>: optional local-only enforcement
+<span class="c-key">telemetry</span>: RAM · battery · thermal status
+<span class="c-key">scoring</span>: feedback-driven engine selection
+
+<span class="c-muted">// Bounded execution loop</span>
+[1] Plan        → select Gemini or .litertlm
+[2] Tool Call   → DeviceCommandExecutor
+[3] Gate Check  → confirm sensitive actions
+[4] Observation → record result in Room DB
+[5] Verify      → recover or finalize reply</code></pre>
+        </aside>
+      </div>
+    </section>
+
+    <section id="download" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Download &amp; Install APK</h2>
+          <p>
+            Debug builds are compiled and verified by GitHub Actions
+            (<code>Android CI</code> on <code>ubuntu-latest</code>, JDK 17).
+          </p>
+        </div>
+
+        <div class="download-layout">
+          <div class="card download-card">
+            <div class="card-badge">Verified CI Artifact · Run #45148566182</div>
+            <h3>open-jarvis-debug-apk</h3>
+            <p>
+              Built from <code>main</code> with <code>./gradlew clean testDebugUnitTest assembleDebug</code>.
+              Includes all unit-tested modules and native LiteRT-LM packaging.
+            </p>
+            <ol class="steps-list">
+              <li>
+                Open the
+                <a href="https://github.com/reyyanking110/open-jarvis/actions/runs/45148566182" target="_blank" rel="noopener noreferrer">
+                  linked Android CI workflow run
+                </a>
+                on GitHub.
+              </li>
+              <li>Scroll down to the <strong>Artifacts</strong> section on the summary page.</li>
+              <li>Download <code>open-jarvis-debug-apk</code> (sign in to GitHub to download Actions artifacts).</li>
+              <li>Extract the ZIP archive and install <code>app-debug.apk</code> on Android 12+ (API 31+).</li>
+            </ol>
+            <p class="note">
+              <strong>Note:</strong> GitHub Actions build artifacts are temporary and follow repository retention settings.
+              You can also build the APK locally from source at any time.
+            </p>
+            <div class="card-actions">
+              <a
+                class="btn btn-primary"
+                href="https://github.com/reyyanking110/open-jarvis/actions/runs/45148566182"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open CI Run #45148566182
+              </a>
+              <a
+                class="btn btn-outline"
+                href="https://github.com/reyyanking110/open-jarvis/actions"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                All Workflow Runs
+              </a>
+            </div>
+          </div>
+
+          <div class="card build-card">
+            <div class="card-badge">Build From Source</div>
+            <h3>Local Gradle Build</h3>
+            <p>
+              Clone the repository and build with Android Gradle Plugin <code>9.0.1</code>,
+              Kotlin <code>2.2.21</code>, and Gradle <code>9.2.1</code> (compileSdk 36, minSdk 31).
+            </p>
+            <div class="code-box">
+              <pre><code id="gradle-cmd">git clone https://github.com/reyyanking110/open-jarvis.git
+cd open-jarvis
+./gradlew clean testDebugUnitTest assembleDebug</code></pre>
+              <button type="button" class="copy-btn" data-copy-target="gradle-cmd">Copy</button>
+            </div>
+            <ul class="meta-list">
+              <li><span>Output APK</span><code>app/build/outputs/apk/debug/app-debug.apk</code></li>
+              <li><span>Package ID</span><code>com.openjarvis.android.debug</code></li>
+              <li><span>Min Android</span><code>Android 12 (API 31)</code></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>System Architecture</h2>
+          <p>Modular Kotlin architecture wired with Hilt dependency injection and Room persistence.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card feature-card">
+            <h3>Hybrid Inference Engine</h3>
+            <p>
+              <code>GeminiCloudEngine</code> (OkHttp SSE streaming + native function calling)
+              combined with <code>LiteRtLmEngine</code> for on-device execution and
+              <code>HybridInferenceRouter</code> for RAM, battery, thermal, and feedback-aware routing.
+            </p>
+          </article>
+          <article class="card feature-card">
+            <h3>Autonomous Agent Loop</h3>
+            <p>
+              <code>AutonomousAgentEngine</code> runs a bounded Plan → Tool Call → Observation →
+              Verification → Recovery cycle with Room task persistence across runs.
+            </p>
+          </article>
+          <article class="card feature-card">
+            <h3>Confirmation Gates</h3>
+            <p>
+              Sensitive device actions — <code>call_phone</code>, <code>compose_message</code>,
+              <code>write_workspace_file</code>, and <code>save_memory</code> — require explicit user approval.
+            </p>
+          </article>
+          <article class="card feature-card">
+            <h3>Memory &amp; Feedback Learning</h3>
+            <p>
+              Room SQLite with FTS4 full-text search (<code>MemoryRepository</code>),
+              conversation logs (<code>ConversationRepository</code>), and trace/feedback scoring
+              (<code>LearningRepository</code>) — no false weight-training claims.
+            </p>
+          </article>
+          <article class="card feature-card">
+            <h3>Voice &amp; Background</h3>
+            <p>
+              <code>SpeechRecognizerManager</code> and <code>TextToSpeechManager</code> for hands-free voice
+              workflows, backed by <code>AgentForegroundService</code> and WorkManager downloads.
+            </p>
+          </article>
+          <article class="card feature-card">
+            <h3>Encrypted Secret Vault</h3>
+            <p>
+              Runtime API keys entered in Settings are encrypted at rest with AES-256-GCM
+              through <code>AndroidKeyStore</code> (<code>SecretVault</code>).
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="models" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Supported Model Catalog</h2>
+          <p>Switch seamlessly between Gemini cloud models and real local <code>.litertlm</code> models.</p>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Model categories">
+          <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-filter="all">All Models (5)</button>
+          <button type="button" class="tab-btn" role="tab" aria-selected="false" data-filter="cloud">Gemini Cloud (2)</button>
+          <button type="button" class="tab-btn" role="tab" aria-selected="false" data-filter="local">On-Device LiteRT-LM (3)</button>
+        </div>
+
+        <div class="models-grid" id="models-grid">
+          <article class="card model-card" data-category="cloud">
+            <div class="model-top">
+              <span class="tag tag-cloud">Cloud · SSE</span>
+              <code>gemini-2.5-flash</code>
+            </div>
+            <h3>Gemini 2.5 Flash</h3>
+            <p>Fast multimodal &amp; tool-calling cloud model for hybrid orchestration.</p>
+            <dl class="model-specs">
+              <div><dt>Context</dt><dd>1,048,576</dd></div>
+              <div><dt>Tools</dt><dd>Native JSON</dd></div>
+            </dl>
+          </article>
+
+          <article class="card model-card" data-category="cloud">
+            <div class="model-top">
+              <span class="tag tag-cloud">Cloud · SSE</span>
+              <code>gemini-2.5-pro</code>
+            </div>
+            <h3>Gemini 2.5 Pro</h3>
+            <p>High-reasoning cloud model for complex multi-step planning.</p>
+            <dl class="model-specs">
+              <div><dt>Context</dt><dd>1,048,576</dd></div>
+              <div><dt>Tools</dt><dd>Native JSON</dd></div>
+            </dl>
+          </article>
+
+          <article class="card model-card" data-category="local">
+            <div class="model-top">
+              <span class="tag tag-local">Offline · INT4</span>
+              <code>gemma-3-1b-it-int4</code>
+            </div>
+            <h3>Gemma 3 1B IT (INT4)</h3>
+            <p>Compact 1B on-device LiteRT-LM model for offline chat and quick commands.</p>
+            <dl class="model-specs">
+              <div><dt>Size</dt><dd>~555 MB</dd></div>
+              <div><dt>Min RAM</dt><dd>3 GB</dd></div>
+              <div><dt>Context</dt><dd>4,096</dd></div>
+            </dl>
+          </article>
+
+          <article class="card model-card" data-category="local">
+            <div class="model-top">
+              <span class="tag tag-local">Offline · Q8</span>
+              <code>qwen2.5-1.5b-instruct-q8</code>
+            </div>
+            <h3>Qwen 2.5 1.5B Instruct (Q8)</h3>
+            <p>Strong structured JSON &amp; offline tool-calling model.</p>
+            <dl class="model-specs">
+              <div><dt>Size</dt><dd>~1.6 GB</dd></div>
+              <div><dt>Min RAM</dt><dd>4 GB</dd></div>
+              <div><dt>Context</dt><dd>4,096</dd></div>
+            </dl>
+          </article>
+
+          <article class="card model-card" data-category="local">
+            <div class="model-top">
+              <span class="tag tag-local">Offline · INT4</span>
+              <code>gemma-3n-e2b-it-int4</code>
+            </div>
+            <h3>Gemma 3n E2B IT (INT4)</h3>
+            <p>Flagship mobile-first Gemma 3n model for rich offline reasoning.</p>
+            <dl class="model-specs">
+              <div><dt>Size</dt><dd>~3.1 GB</dd></div>
+              <div><dt>Min RAM</dt><dd>6 GB</dd></div>
+              <div><dt>Context</dt><dd>4,096</dd></div>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Native Android Platform Tools</h2>
+          <p>
+            Registered through <code>ToolsModule</code> and dispatched via
+            <code>DeviceCommandExecutor</code> with runtime permission checks.
+          </p>
+        </div>
+        <div class="tools-grid">
+          <div class="tool-chip"><span>Alarm &amp; Timer</span><code>AlarmTimerTools</code></div>
+          <div class="tool-chip"><span>Phone, SMS &amp; Email</span><code>CommunicationTools</code></div>
+          <div class="tool-chip"><span>Battery, RAM &amp; Thermal</span><code>DeviceInfoTool</code></div>
+          <div class="tool-chip"><span>SAF Workspace Files</span><code>FileOperationTool</code></div>
+          <div class="tool-chip"><span>Camera Flashlight</span><code>FlashlightTool</code></div>
+          <div class="tool-chip"><span>FTS4 Memory Read/Write</span><code>MemoryTools</code></div>
+          <div class="tool-chip"><span>Local Notifications</span><code>NotificationTool</code></div>
+          <div class="tool-chip"><span>Launch Installed Apps</span><code>OpenAppTool</code></div>
+          <div class="tool-chip"><span>System Settings Panels</span><code>SettingsShortcutTool</code></div>
+          <div class="tool-chip"><span>Audio Stream Volume</span><code>VolumeControlTool</code></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="setup" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Configuration &amp; Offline Mode</h2>
+          <p>Bring your own Gemini API key and/or local <code>.litertlm</code> weights.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>1. Gemini API Configuration</h3>
+            <p>
+              Open <strong>Settings</strong> inside the app and enter your Gemini API key.
+              It is stored locally and encrypted with AES-256-GCM via <code>AndroidKeyStore</code>.
+            </p>
+            <p class="muted">
+              For local builds, you may optionally place <code>GEMINI_API_KEY=...</code> inside your
+              git-ignored <code>local.properties</code> file.
+            </p>
+          </div>
+          <div class="card">
+            <h3>2. Local Model Setup (Offline Mode)</h3>
+            <p>
+              Offline inference requires a real <code>.litertlm</code> model file on-device — the app
+              never simulates offline responses.
+            </p>
+            <p class="muted">
+              Open the <strong>Models</strong> tab, tap <strong>Download</strong> (via WorkManager) or
+              <strong>Import File</strong> via Storage Access Framework, then pick <code>GPU</code>,
+              <code>CPU</code>, or <code>NPU</code>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>
+        Open JARVIS Android · Built with Kotlin, Jetpack Compose, Hilt, Room &amp; LiteRT-LM.
+      </p>
+      <div class="footer-links">
+        <a href="https://github.com/reyyanking110/open-jarvis" target="_blank" rel="noopener noreferrer">Repository</a>
+        <a href="https://github.com/reyyanking110/open-jarvis/actions/runs/45148566182" target="_blank" rel="noopener noreferrer">CI Run #45148566182</a>
+        <a href="https://github.com/open-jarvis/OpenJarvis" target="_blank" rel="noopener noreferrer">OpenJarvis Upstream</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
